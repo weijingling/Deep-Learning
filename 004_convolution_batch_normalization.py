@@ -17,9 +17,11 @@ class ConvolutionBatchNormalization():
     def build_model_batch_normalization(self):        
         MODEL = Sequential()
         
-        # BatchNormalization:
-        # momentum: Momentum for the moving mean and the moving variance.
-        # epsilon: Small float added to variance to avoid dividing by zero.
+        # =============================================================================
+        #         BatchNormalization:
+        #         momentum: Momentum for the moving mean and the moving variance.
+        #         epsilon: Small float added to variance to avoid dividing by zero.
+        # =============================================================================
         
         MODEL.add(Convolution2D(filters=32, kernel_size=(3, 3), input_shape=(32, 32, 3), padding='same'))
         # Output Shape = (None, 32, 32, 32), Param# = 896
